@@ -17,14 +17,13 @@ const images = [
 ];
 
 let currentImageIndex = 0;
-const slideElements = [];
+const slideElements = Array.from(slideshowContainer.children); // Get existing HTML slides like the pie chart
 
 // Preload and create img elements
-images.forEach((src, index) => {
+images.forEach((src) => {
     const img = document.createElement('img');
     img.src = src;
-    img.classList.add('slide-img');
-    if (index === 0) img.classList.add('active');
+    img.classList.add('slide-item');
     slideshowContainer.appendChild(img);
     slideElements.push(img);
 });
@@ -89,14 +88,6 @@ const contentData = {
                 <p>Delivering high-end private villas, townhouses, and corporate headquarters across Riyadh.</p>
             </div>
             <div class="visual-col">
-                <div class="pie-chart">
-                    <div class="pie-slice pie-slice-left">
-                        <img src="images/King Salman Park 1.jpg" alt="King Salman Park 1">
-                    </div>
-                    <div class="pie-slice pie-slice-right">
-                        <img src="images/King Salman Park 2.jpg" alt="King Salman Park 2">
-                    </div>
-                </div>
                 <div class="project-card">
                     <h4>KSP Highlights</h4>
                     <p>- KSP Hub Design & Loop Bridges<br>- King Salman Park Grand Mosque<br>- Royal Arts Complex<br>- Museum of the Earth</p>

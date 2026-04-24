@@ -51,20 +51,29 @@ body, html {
     z-index: 1;
 }
 
-.slide-img {
+.slide-item {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     z-index: 0;
 }
 
-.slide-img.active {
+.slide-item.active {
     opacity: 1;
+}
+
+img.slide-item {
+    object-fit: cover;
+}
+
+.bg-pie-chart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Main Landing View (4 Corners) */
@@ -386,4 +395,14 @@ body, html {
 }
 .pie-slice:hover img {
     transform: scale(1.1);
+}
+
+.bg-pie-chart {
+    width: 60vmin;
+    height: 60vmin;
+    max-width: 800px;
+    max-height: 800px;
+    margin: 0;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
