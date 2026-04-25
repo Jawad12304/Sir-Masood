@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1365,6 +1365,204 @@ img.slide-item {
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
+
+/* ─── MOBILE RESPONSIVENESS ─── */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Nav Bar */
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  /* Main Landing View inside hero-new */
+  .landing-view {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6rem 1.5rem 2rem 1.5rem; 
+  }
+  .corner-top-left, .corner-top-right, .corner-bottom-left, .corner-bottom-right {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    text-align: center !important;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .corner-bottom-left {
+    align-items: center !important;
+  }
+  .slogan-text {
+    text-align: center !important;
+  }
+  .hero-scroll-hint {
+    justify-content: center;
+  }
+  .bg-pie-chart {
+     width: 85vmin;
+     height: 85vmin;
+  }
+
+  /* Old Hero Section (if still present) */
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+    height: auto;
+  }
+  .hero-left {
+    padding: 3rem 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* About */
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-headline {
+    font-size: 2.5rem;
+  }
+  .about-services {
+    grid-template-columns: 1fr;
+  }
+  .service-item:nth-child(odd) {
+    border-right: none;
+  }
+
+  /* Founders */
+  .founders-section {
+    padding: 4rem 1.5rem;
+  }
+  .founders-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding: 4rem 1.5rem;
+  }
+  .projects-header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card.featured {
+    grid-column: span 1;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 4rem 1.5rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1.5rem;
+  }
+  .stats-bar-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 1.5rem;
+  }
+
+  /* Team */
+  .team-section {
+    padding: 4rem 1.5rem;
+  }
+  .team-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .team-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Partnership */
+  .partnership-section {
+    padding: 4rem 1.5rem;
+  }
+  .partnership-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .mission-stats {
+    grid-template-columns: 1fr;
+  }
+  .mission-stat {
+    grid-column: span 1 !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 4rem 1.5rem 2rem;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .slogan-text {
+    font-size: 1rem;
+  }
+  .stats-bar-num {
+    font-size: 2rem;
+  }
+  .mission-stat-num {
+    font-size: 1.8rem;
+  }
+}
 </style>
 </head>
 <body>
